@@ -10,3 +10,4 @@ matplotlib
 google-generativeai
 requests
 python-dotenv
+gunicorn
