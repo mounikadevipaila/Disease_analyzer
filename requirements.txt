@@ -1,4 +1,4 @@
-flask==2.3.4
+flask==2.3.3
 numpy==1.25.2
 pillow==10.0.1
 opencv-python==4.8.1.78
