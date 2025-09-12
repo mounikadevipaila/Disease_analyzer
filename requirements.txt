@@ -1,3 +1,12 @@
-flask==2.3.4
-google-generativeai==0.2.0
-python-dotenv==1.0.0
+flask
+numpy
+pillow
+opencv-python
+torch
+tensorflow
+scikit-learn
+scipy
+matplotlib
+google-generativeai
+requests
+python-dotenv
