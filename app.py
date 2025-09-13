@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import os
-import io
 import google.generativeai as genai
 from dotenv import load_dotenv
 
@@ -14,6 +14,7 @@ if not api_key:
 genai.configure(api_key=api_key)
 
 app = Flask(__name__)
+CORS(app, resources={r"/analyze": {"origins": "*"}})  # <-- Enable CORS for analyze route
 
 @app.route("/analyze", methods=["POST"])
 def analyze():
