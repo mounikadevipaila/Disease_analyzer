@@ -14,7 +14,9 @@ if not api_key:
 genai.configure(api_key=api_key)
 
 app = Flask(__name__)
-CORS(app, resources={r"/analyze": {"origins": "*"}})  # <-- Enable CORS for analyze route
+
+# ✅ Allow only your Vercel frontend
+CORS(app, resources={r"/analyze": {"origins": "https://farm-xpert-frontend-rddk.vercel.app"}})
 
 @app.route("/analyze", methods=["POST"])
 def analyze():
@@ -46,3 +48,4 @@ def analyze():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+
